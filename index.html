@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </head>
 <body>
-    <div>hello world</div>
+    <div id='app'>
+        <button @click="chageUrl('dist/index.html')"></button>
+    </div>
+    
 </body>
 </html>
+<script>
+    let vm = new Vue({
+        el:"#app",
+        methods:{
+            chageUrl(url){
+                window.location.href=url;
+            }
+        }
+
+    })
+</script>
